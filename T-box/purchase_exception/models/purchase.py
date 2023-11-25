@@ -11,6 +11,7 @@ class PurchaseOrder(models.Model):
     _name = "purchase.order"
     _order = "main_exception_id asc, date_order desc, name desc"
 
+
     @api.model
     def test_all_draft_orders(self):
         order_set = self.search([("state", "=", "draft")])

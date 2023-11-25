@@ -45,6 +45,7 @@ class PurchaseOrderLine(models.Model):
 class PurchaseOrder(models.Model):
     _inherit = "purchase.order"
 
+
     def _compute_qty_to_invoice(self):
         dp = self.env["decimal.precision"].precision_get("Product Unit of Measure")
         for po in self:

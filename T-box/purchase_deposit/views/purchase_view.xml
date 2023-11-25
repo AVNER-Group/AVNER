@@ -5,14 +5,42 @@
         <field name="model">purchase.order</field>
         <field name="inherit_id" ref="purchase.purchase_order_form" />
         <field name="arch" type="xml">
-            <xpath expr="//button[@name='button_cancel']" position="before">
-                <button
-                    name="%(purchase_deposit.action_view_purchase_advance_payment_inv)d"
-                    states="purchase"
-                    type="action"
-                    string="Register Deposit"
-                />
+            <!-- Add a new notebook page with the fields in a new tab -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Purchase Conditions">
+                    <group>
+                        <field name="delivery_place"/>
+                        <field name="mov"/>
+                        <field name="deposit_percentage"/>
+                        <field name="condition_of_goods"/>
+                        <field name="validity_of_offer"/>
+                        <field name="restrictions"/>
+                        <field name="price_discount"/>
+                        <field name="documentation_provided"/>
+                        <field name="commission_to_third_parties"/>
+                    </group>
+                </page>
             </xpath>
         </field>
     </record>
+    <record id="view_purchase_order_tree_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.tree.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_tree" />
+        <field name="arch" type="xml">
+            <!-- Add the new fields inside the existing state field -->
+            <xpath expr="//field[@name='date_order']" position="after">
+                <field name="delivery_place"/>
+                <field name="mov"/>
+                <field name="deposit_percentage"/>
+                <field name="condition_of_goods"/>
+                <field name="validity_of_offer"/>
+                <field name="restrictions"/>
+                <field name="price_discount"/>
+                <field name="documentation_provided"/>
+                <field name="commission_to_third_parties"/>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>

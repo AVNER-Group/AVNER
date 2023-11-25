@@ -1,0 +1,2 @@
+
+16.0.0.2 ==> Fixed issue of when we add product in purchase order line at that time traceback occur.
