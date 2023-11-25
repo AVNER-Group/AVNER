@@ -95,6 +95,7 @@ class ProductTemplate(models.Model):
         string="ASS",
     )
     commission_free = fields.Float(string='Commission Free')
+    desc_limit = fields.Char(string='Description Limit')
 
     @api.model
     def _calc_volume(self, product_length, product_height, product_width, uom_id):
