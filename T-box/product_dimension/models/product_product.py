@@ -71,6 +71,7 @@ class ProductProduct(models.Model):
     ass = fields.Char(
         string="ASS",
     )
+    commission_free = fields.Float(string='Commission Free')
 
     @api.depends(
         "product_length", "product_height", "product_width", "dimensional_uom_id"
