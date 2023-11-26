@@ -1,0 +1,35 @@
+version: "3.7"
+services:
+  db:
+    image: postgres:15
+    ports:
+      - "5444:5444"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+    volumes:
+      - odoo16-db1-data:/var/lib/postgresql/data
+
+  odoo_web:
+    image: odoo:16.0
+    ports:
+      - "8069:8069"
+    volumes:
+      - ./T-box:/T-box
+      - ./odoo.conf:/etc/odoo/odoo.conf
+      - odoo16-web-data:/var/lib/odoo
+    command:
+      -d pharmadatalab
+
+# jenkins_web:
+#   image: sameerz09/jenkinsiamge
+#   ports:
+#     - "9090:8080"
+#   volumes:
+#     - ./jenfolder:/jenfolder
+
+volumes:
+  odoo16-web-data:
+  odoo16-db1-data:
+
