@@ -18,7 +18,8 @@ class PurchaseOrder(models.Model):
         string="Condition of the Goods", default='current')
     validity_of_offer = fields.Char(string="Validity of the Offer")
     restrictions = fields.Text(string="Restrictions")
-    price_discount = fields.Float(string="Price Discount", digits=(6, 2), default=60.0)
+   # price_discount = fields.Float(string="Price Discount", digits=(6, 2), default=60.0)
+    price = fields.Char(string="Price")
     documentation_provided = fields.Text(string="Documentation Provided", default="Sanitized Invoice Upon Request")
     commission_to_third_parties = fields.Selection([
         ('none', 'None'),
