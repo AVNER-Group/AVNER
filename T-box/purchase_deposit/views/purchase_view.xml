@@ -9,6 +9,7 @@
             <xpath expr="//notebook" position="inside">
                 <page string="Purchase Conditions">
                     <group>
+                        <field name="delivery_time_frame"/>
                         <field name="delivery_place"/>
                         <field name="mov"/>
                         <field name="deposit_percentage"/>
@@ -30,6 +31,7 @@
         <field name="arch" type="xml">
             <!-- Add the new fields inside the existing state field -->
             <xpath expr="//field[@name='date_order']" position="after">
+                <field name="delivery_time_frame"/>
                 <field name="delivery_place"/>
                 <field name="mov"/>
                 <field name="deposit_percentage"/>

@@ -8,6 +8,7 @@ from odoo import fields, models
 class PurchaseOrder(models.Model):
     _inherit = "purchase.order"
 
+    delivery_time_frame = fields.Char(string='Delivery Time Frame', default='1 month')
     delivery_place = fields.Char(string="Delivery Place")
     mov = fields.Monetary(string="MOV", currency_field='currency_id')
     deposit_percentage = fields.Float(string="Deposit", digits=(6, 2), default=10.0)
@@ -23,6 +24,7 @@ class PurchaseOrder(models.Model):
         ('none', 'None'),
         ('yes', 'Yes')],
         string="Commission to Third Parties", default='none')
+
 
     def copy_data(self, default=None):
         if default is None:
