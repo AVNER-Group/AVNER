@@ -20,7 +20,7 @@ services:
       - ./odoo.conf:/etc/odoo/odoo.conf
       - odoo16-web-data:/var/lib/odoo
     command:
-      -d pharmadatalab
+      -d avnergroup
 
 # jenkins_web:
 #   image: sameerz09/jenkinsiamge
