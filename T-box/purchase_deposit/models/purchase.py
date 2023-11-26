@@ -16,7 +16,7 @@ class PurchaseOrder(models.Model):
         ('current', 'Current'),
         ('other', 'Other')],
         string="Condition of the Goods", default='current')
-    validity_of_offer = fields.Integer(string="Validity of the Offer", default=6)
+    validity_of_offer = fields.Char(string="Validity of the Offer")
     restrictions = fields.Text(string="Restrictions")
     price_discount = fields.Float(string="Price Discount", digits=(6, 2), default=60.0)
     documentation_provided = fields.Text(string="Documentation Provided", default="Sanitized Invoice Upon Request")
