@@ -16,7 +16,7 @@
                         <field name="condition_of_goods"/>
                         <field name="validity_of_offer"/>
                         <field name="restrictions"/>
-                        <field name="price_discount"/>
+                        <field name="price"/>
                         <field name="documentation_provided"/>
                         <field name="commission_to_third_parties"/>
                     </group>
@@ -38,7 +38,7 @@
                 <field name="condition_of_goods"/>
                 <field name="validity_of_offer"/>
                 <field name="restrictions"/>
-                <field name="price_discount"/>
+                <field name="price"/>
                 <field name="documentation_provided"/>
                 <field name="commission_to_third_parties"/>
             </xpath>
