@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="sale_stock_sale_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.stock.sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_stock.view_order_form_inherit_sale_stock" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='incoterm']" position="after">
+                <field name="incoterm_address_id" />
+            </xpath>
+        </field>
+    </record>
+    <record id="view_sale_order_form_inherit" model="ir.ui.view">
+        <field name="name">view.sale.order.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <!-- Add a new notebook page with the fields in a new tab -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Sale Conditions">
+                    <group>
+                        <field name="delivery_time_frame"/>
+                        <field name="delivery_place"/>
+                        <field name="mov"/>
+                        <field name="deposit_percentage"/>
+                        <field name="condition_of_goods"/>
+                        <field name="validity_of_offer"/>
+                        <field name="restrictions"/>
+                        <field name="price"/>
+                        <field name="documentation_provided"/>
+                        <field name="commission_to_third_parties"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+<!--    <record id="view_purchase_order_tree_inherit" model="ir.ui.view">-->
+<!--        <field name="name">purchase.order.tree.inherit</field>-->
+<!--        <field name="model">purchase.order</field>-->
+<!--        <field name="inherit_id" ref="purchase.purchase_order_tree" />-->
+<!--        <field name="arch" type="xml">-->
+<!--            &lt;!&ndash; Add the new fields inside the existing state field &ndash;&gt;-->
+<!--            <xpath expr="//field[@name='date_order']" position="after">-->
+<!--                <field name="delivery_time_frame"/>-->
+<!--                <field name="delivery_place"/>-->
+<!--                <field name="mov"/>-->
+<!--                <field name="deposit_percentage"/>-->
+<!--                <field name="condition_of_goods"/>-->
+<!--                <field name="validity_of_offer"/>-->
+<!--                <field name="restrictions"/>-->
+<!--                <field name="price"/>-->
+<!--                <field name="documentation_provided"/>-->
+<!--                <field name="commission_to_third_parties"/>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>

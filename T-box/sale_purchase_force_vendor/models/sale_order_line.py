@@ -7,9 +7,6 @@ from odoo import api, fields, models
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
-    sale_purchase_force_vendor_restrict = fields.Boolean(
-        related="company_id.sale_purchase_force_vendor_restrict"
-    )
 
 
 class SaleOrderLine(models.Model):
