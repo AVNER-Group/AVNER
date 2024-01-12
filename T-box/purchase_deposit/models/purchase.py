@@ -26,6 +26,14 @@ class PurchaseOrder(models.Model):
         ('yes', 'Yes')],
         string="Commission to Third Parties", default='none')
 
+    Dial_bracelets = fields.Char(string="Dial & bracelets")
+    SRP_CHF = fields.Char(string="SRP CHF")
+    SRP_US = fields.Char(string="SRP US")
+    SRP_JPN = fields.Char(string="SRP JPN")
+    COST_CHF = fields.Char(string="COST CHF")
+    Stock_HQ = fields.Char(string="Stock HQ")
+
+
 
     def copy_data(self, default=None):
         if default is None:

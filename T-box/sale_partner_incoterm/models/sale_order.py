@@ -29,6 +29,13 @@ class SaleOrder(models.Model):
         ('yes', 'Yes')],
         string="Commission to Third Parties", default='none')
 
+    Dial_bracelets = fields.Char(string="Dial & bracelets")
+    SRP_CHF = fields.Char(string="SRP CHF")
+    SRP_US = fields.Char(string="SRP US")
+    SRP_JPN = fields.Char(string="SRP JPN")
+    COST_CHF = fields.Char(string="COST CHF")
+    Stock_HQ = fields.Char(string="Stock HQ")
+
     @api.onchange("partner_id")
     def onchange_partner_id_set_incoterm(self):
         partner = self.partner_id
