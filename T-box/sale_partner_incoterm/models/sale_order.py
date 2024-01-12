@@ -28,7 +28,6 @@ class SaleOrder(models.Model):
         ('none', 'None'),
         ('yes', 'Yes')],
         string="Commission to Third Parties", default='none')
-
     Dial_bracelets = fields.Char(string="Dial & bracelets")
     SRP_CHF = fields.Char(string="SRP CHF")
     SRP_US = fields.Char(string="SRP US")
