@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <record id="view_purchase_order_form_inherit" model="ir.ui.view">
         <field name="name">view.purchase.order.inherit</field>
         <field name="model">purchase.order</field>
-        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
         <field name="arch" type="xml">
             <!-- Add a new notebook page with the fields in a new tab -->
             <xpath expr="//notebook" position="inside">
                 <page string="Purchase Conditions">
-			<group>
-			    <group>
+                    <group>
                         <field name="delivery_time_frame"/>
                         <field name="delivery_place"/>
                         <field name="mov"/>
@@ -17,18 +16,9 @@
                         <field name="condition_of_goods"/>
                         <field name="validity_of_offer"/>
                         <field name="restrictions"/>
-			<field name="price"/>
-			    </group>
-			    <group>
+                        <field name="price"/>
                         <field name="documentation_provided"/>
-			<field name="commission_to_third_parties"/>
-			<field name="Dial_bracelets"/>
-			<field name="SRP_CHF"/>
-			<field name="SRP_US"/>
-			<field name="SRP_JPN"/>
-			<field name="COST_CHF"/>
-			<field name="Stock_HQ"/>
-		            </group>
+                        <field name="commission_to_third_parties"/>
                     </group>
                 </page>
             </xpath>
@@ -37,10 +27,12 @@
     <record id="view_purchase_order_tree_inherit" model="ir.ui.view">
         <field name="name">purchase.order.tree.inherit</field>
         <field name="model">purchase.order</field>
-        <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+        <field name="inherit_id" ref="purchase.purchase_order_tree" />
         <field name="arch" type="xml">
-            <!-- Add the new fields after the date_order field -->
+            <!-- Add the new fields inside the existing state field -->
             <xpath expr="//field[@name='date_order']" position="after">
+                <group>
+                    <group>
                 <field name="delivery_time_frame"/>
                 <field name="delivery_place"/>
                 <field name="mov"/>
@@ -49,6 +41,8 @@
                 <field name="validity_of_offer"/>
                 <field name="restrictions"/>
                 <field name="price"/>
+                        </group>
+                    <group>
                 <field name="documentation_provided"/>
                 <field name="commission_to_third_parties"/>
                 <field name="Dial_bracelets"/>
@@ -57,8 +51,11 @@
                 <field name="SRP_JPN"/>
                 <field name="COST_CHF"/>
                 <field name="Stock_HQ"/>
+                        </group>
+                </group>
             </xpath>
         </field>
     </record>
+
 </odoo>
 
