@@ -9,16 +9,26 @@
             <xpath expr="//notebook" position="inside">
                 <page string="Purchase Conditions">
                     <group>
-                        <field name="delivery_time_frame"/>
-                        <field name="delivery_place"/>
-                        <field name="mov"/>
-                        <field name="deposit_percentage"/>
-                        <field name="condition_of_goods"/>
-                        <field name="validity_of_offer"/>
-                        <field name="restrictions"/>
-                        <field name="price"/>
-                        <field name="documentation_provided"/>
-                        <field name="commission_to_third_parties"/>
+                            <field name="delivery_time_frame"/>
+                            <field name="delivery_place"/>
+                            <field name="mov"/>
+                            <field name="deposit_percentage"/>
+                            <field name="condition_of_goods"/>
+                            <field name="validity_of_offer"/>
+                            <field name="restrictions"/>
+                            <field name="price"/>
+                            <field name="documentation_provided"/>
+                            <field name="commission_to_third_parties"/>
+                    </group>
+                    <group>
+                            <field name="documentation_provided"/>
+                            <field name="commission_to_third_parties"/>
+                            <field name="Dial_bracelets"/>
+                            <field name="SRP_CHF"/>
+                            <field name="SRP_US"/>
+                            <field name="SRP_JPN"/>
+                            <field name="COST_CHF"/>
+                            <field name="Stock_HQ"/>
                     </group>
                 </page>
             </xpath>
@@ -31,8 +41,7 @@
         <field name="arch" type="xml">
             <!-- Add the new fields inside the existing state field -->
             <xpath expr="//field[@name='date_order']" position="after">
-                <group>
-                    <group>
+
                 <field name="delivery_time_frame"/>
                 <field name="delivery_place"/>
                 <field name="mov"/>
@@ -41,8 +50,6 @@
                 <field name="validity_of_offer"/>
                 <field name="restrictions"/>
                 <field name="price"/>
-                        </group>
-                    <group>
                 <field name="documentation_provided"/>
                 <field name="commission_to_third_parties"/>
                 <field name="Dial_bracelets"/>
@@ -51,8 +58,7 @@
                 <field name="SRP_JPN"/>
                 <field name="COST_CHF"/>
                 <field name="Stock_HQ"/>
-                        </group>
-                </group>
+                        
             </xpath>
         </field>
     </record>
