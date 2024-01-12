@@ -8,29 +8,8 @@
             <!-- Add a new notebook page with the fields in a new tab -->
             <xpath expr="//notebook" position="inside">
                 <page string="Purchase Conditions">
-                    <group>
-                            <field name="delivery_time_frame"/>
-                            <field name="delivery_place"/>
-                            <field name="mov"/>
-                            <field name="deposit_percentage"/>
-                            <field name="condition_of_goods"/>
-                            <field name="validity_of_offer"/>
-                            <field name="restrictions"/>
-                            <field name="price"/>
-                            <field name="documentation_provided"/>
-                            <field name="commission_to_third_parties"/>
-                    </group>
-                    <group>
-                            <field name="documentation_provided"/>
-                            <field name="commission_to_third_parties"/>
-                            <field name="Dial_bracelets"/>
-                            <field name="SRP_CHF"/>
-                            <field name="SRP_US"/>
-                            <field name="SRP_JPN"/>
-                            <field name="COST_CHF"/>
-                            <field name="Stock_HQ"/>
-			<group>
-			    <group>
+                        <group>
+                            <group>
                         <field name="delivery_time_frame"/>
                         <field name="delivery_place"/>
                         <field name="mov"/>
@@ -38,18 +17,19 @@
                         <field name="condition_of_goods"/>
                         <field name="validity_of_offer"/>
                         <field name="restrictions"/>
-			<field name="price"/>
-			    </group>
-			    <group>
+                        <field name="price"/>
+                            </group>
+                            <group>
                         <field name="documentation_provided"/>
-			<field name="commission_to_third_parties"/>
-			<field name="Dial_bracelets"/>
-			<field name="SRP_CHF"/>
-			<field name="SRP_US"/>
-			<field name="SRP_JPN"/>
-			<field name="COST_CHF"/>
-			<field name="Stock_HQ"/>
-		            </group>             </group>
+                        <field name="commission_to_third_parties"/>
+                        <field name="Dial_bracelets"/>
+                        <field name="SRP_CHF"/>
+                        <field name="SRP_US"/>
+                        <field name="SRP_JPN"/>
+                        <field name="COST_CHF"/>
+                        <field name="Stock_HQ"/>
+                            </group>
+                    </group>
                 </page>
             </xpath>
         </field>
