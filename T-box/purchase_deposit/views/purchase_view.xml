@@ -45,12 +45,12 @@
                     <group>
                 <field name="documentation_provided"/>
                 <field name="commission_to_third_parties"/>
-                <field name="Dial_bracelets"/>
-                <field name="SRP_CHF"/>
-                <field name="SRP_US"/>
-                <field name="SRP_JPN"/>
-                <field name="COST_CHF"/>
-                <field name="Stock_HQ"/>
+<!--                <field name="Dial_bracelets"/>-->
+<!--                <field name="SRP_CHF"/>-->
+<!--                <field name="SRP_US"/>-->
+<!--                <field name="SRP_JPN"/>-->
+<!--                <field name="COST_CHF"/>-->
+<!--                <field name="Stock_HQ"/>-->
                         </group>
                 </group>
             </xpath>
