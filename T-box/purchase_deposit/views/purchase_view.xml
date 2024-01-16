@@ -23,11 +23,45 @@
                         <field name="documentation_provided"/>
                         <field name="commission_to_third_parties"/>
                         <field name="Dial_bracelets"/>
+                        <field name="Stock_HQ"/>
+
+
+                            </group>
+                    </group>
+                </page>
+                    <page string="Retail Recommended Prices">
+                        <group>
+                            <group>
                         <field name="SRP_CHF"/>
                         <field name="SRP_US"/>
+                        <field name="SRP_EUR"/>
+
+                            </group>
+                            <group>
                         <field name="SRP_JPN"/>
-                        <field name="COST_CHF"/>
-                        <field name="Stock_HQ"/>
+<!--                        <field name="COST_CHF"/>-->
+                        <field name="SRP_GBP"/>
+                        <field name="SRP_HKD"/>
+                        <field name="SRP_Yen"/>
+
+                            </group>
+                    </group>
+                </page>
+                 <page string="Wholesale Recommended Prices">
+                        <group>
+                            <group>
+                        <field name="SWP_CHF"/>
+                        <field name="SWP_USD"/>
+                        <field name="SWP_EUR"/>
+
+                            </group>
+                            <group>
+                        <field name="SWP_GBP"/>
+<!--                        <field name="COST_CHF"/>-->
+                        <field name="SWP_HKD"/>
+                        <field name="SWP_Yen"/>
+                        <field name="SWP_CNH"/>
+
                             </group>
                     </group>
                 </page>

@@ -25,13 +25,30 @@ class PurchaseOrder(models.Model):
         ('none', 'None'),
         ('yes', 'Yes')],
         string="Commission to Third Parties", default='none')
+    Stock_HQ = fields.Char(string="Stock HQ")
+
 
     Dial_bracelets = fields.Char(string="Dial & bracelets")
     SRP_CHF = fields.Char(string="SRP CHF")
     SRP_US = fields.Char(string="SRP US")
     SRP_JPN = fields.Char(string="SRP JPN")
-    COST_CHF = fields.Char(string="COST CHF")
-    Stock_HQ = fields.Char(string="Stock HQ")
+    # COST_CHF = fields.Char(string="COST CHF")
+    SRP_EUR = fields.Char(string="SRP EUR")
+    SRP_GBP = fields.Char(string="SRP GBP")
+    SRP_HKD = fields.Char(string="SRP HKD")
+    SRP_Yen = fields.Char(string="SRP Yen")
+
+    SWP_CHF = fields.Char(string="Wholesale Price CHF")
+    SWP_USD = fields.Char(string="Wholesale Price USD")
+    SWP_EUR= fields.Char(string="Wholesale Price EUR")
+    SWP_GBP = fields.Char(string="Wholesale Price GBP")
+    SWP_HKD = fields.Char(string="Wholesale Price HKD")
+
+    SWP_Yen = fields.Char(string="Wholesale Price Yen")
+    SWP_CNH = fields.Char(string="Wholesale Price CNH")
+
+
+
 
 
 
